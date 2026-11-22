@@ -33,3 +33,18 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+const displayRecieveProfileData = (dataProfile) => {
+  console.log(dataProfile); 
+}
+const displayRecieveOrderdatas = (dataOrder) => {
+  console.log(dataOrder);
+}
+const displayError = (error) => {
+  console.log(error);
+}
+
+getJohnProfile()
+  .then(displayRecieveProfileData)
+  .then(getJohnOrders)
+  .then(displayRecieveOrderdatas)
+  .catch(displayError);
